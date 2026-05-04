@@ -1,0 +1,18 @@
+username:bhaktapurintlhospital44_db_user
+pass: bhaktapurintlhospital@#44
+
+conn url: mongodb+srv://bhaktapurintlhospital44_db_user:bhaktapurintlhospital@#44@bhaktapurintlhospital.ty6zubs.mongodb.net/?appName=Bhaktapurintlhospital
+
+
+#for email password and google account settings
+passkey for google account : 1995
+app name : Hospital App
+Email password:kvkzbnkhovbpzvmx
+
+#for env file 
+MONGO_URI=mongodb+srv://bhaktapurintlhospital44_db_user:bhaktapurintlhospital%40%2344@bhaktapurintlhospital.ty6zubs.mongodb.net/hospital?appName=Bhaktapurintlhospital
+PORT=8080
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USER=bhaktapurintlhospital44@gmail.com
+EMAIL_PASS=kvkzbnkhovbpzvmx
