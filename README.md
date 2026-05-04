@@ -1,1 +1,2 @@
 # BhaktapurIntlHospital
+#ready to host
