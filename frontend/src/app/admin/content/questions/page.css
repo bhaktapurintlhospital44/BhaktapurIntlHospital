@@ -1,0 +1,189 @@
+.q-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.q-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #1e40af;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* LOADING + ERROR */
+.q-loading,
+.q-error {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* SECTION */
+.q-section {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* HEADER */
+.q-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.q-header h3 {
+  font-size: 1.8rem;
+  color: #1e40af;
+  border-bottom: 3px solid #0b7ac4;
+  padding-bottom: 0.5rem;
+}
+
+.q-badge {
+  background: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* EMPTY */
+.q-empty {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+/* LIST */
+.q-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* CARD */
+.q-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* STATUS */
+.q-status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.q-status.answered {
+  background: #10b981;
+}
+
+.q-status.pending {
+  background: #f59e0b;
+}
+
+/* TEXT */
+.q-name {
+  color: #1e40af;
+  font-size: 1.2rem;
+}
+
+.q-email,
+.q-question {
+  color: #4b5563;
+}
+
+.q-date {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-top: 0.5rem;
+}
+
+/* ANSWER BOX */
+.q-answerBox {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+}
+
+.q-answerTitle {
+  font-weight: bold;
+  color: #166534;
+}
+
+.q-answerText {
+  color: #4b5563;
+}
+
+/* ACTIONS */
+.q-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* BUTTONS */
+.btn-green {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-blue {
+  background: #0b7ac4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-orange {
+  background: #f59e0b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-red {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* HOVER EFFECTS */
+.btn-green:hover {
+  background: #059669;
+}
+.btn-blue:hover {
+  background: #09609d;
+}
+.btn-orange:hover {
+  background: #d97706;
+}
+.btn-red:hover {
+  background: #dc2626;
+}

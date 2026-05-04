@@ -1,0 +1,43 @@
+.section {
+  padding: 2rem 0;
+}
+
+.section h2 {
+  margin: 0;
+}
+
+.section p {
+  margin-top: 0.5rem;
+}
+
+/* FORM */
+.form {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+  max-width: 480px;
+}
+
+/* INPUTS */
+.form input,
+.form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* BUTTON */
+.form button {
+  padding: 0.75rem;
+  background-color: #0b7ac4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #0b7ac4; /* same as before (no design change) */
+}

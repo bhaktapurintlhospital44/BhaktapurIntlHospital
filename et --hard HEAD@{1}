@@ -1,0 +1,25 @@
+[33mdec4fac[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mom[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: pull https://github.com/RabinShresthaa/intern.git: Fast-forward
+[33ma1b4508[m[33m ([m[1;31morigin/om[m[33m)[m HEAD@{1}: pull: Fast-forward
+[33ma2efa63[m HEAD@{2}: commit: added validation and finished testing
+[33m0305057[m HEAD@{3}: commit: made health package and contact us responsive
+[33mf68f641[m HEAD@{4}: commit: added healthpackage
+[33m3727e7c[m HEAD@{5}: commit: Your commit message without large videos
+[33m5e2a649[m HEAD@{6}: reset: moving to HEAD~1
+[33m6aa367c[m HEAD@{7}: commit: pusged all
+[33m5e2a649[m HEAD@{8}: commit: Added DepartmentSection in HomePage
+[33m394f3e6[m HEAD@{9}: commit: department fully build but adding appointment button still left
+[33m5adc15e[m HEAD@{10}: commit: changed header and footer
+[33m4f8626b[m HEAD@{11}: commit: added email validation aad delete button for department
+[33mdd5229c[m HEAD@{12}: commit: updated edit and add new department sector for admin pannel
+[33m0cd9ce3[m HEAD@{13}: commit: added 2image option in admin pannel one
+[33m159d78c[m HEAD@{14}: commit: added
+[33mfe7516b[m HEAD@{15}: commit: Update admin departments page only addition option to add the new department is added
+[33m41824c5[m HEAD@{16}: commit: Update admin departments page only adding edit option for the department card
+[33m861da41[m HEAD@{17}: reset: moving to HEAD
+[33m861da41[m HEAD@{18}: commit: added cards in department for user and admin
+[33m97c1fec[m[33m ([m[1;32mmain[m[33m)[m HEAD@{19}: reset: moving to main
+[33m3d69097[m HEAD@{20}: commit: Move gitignore to root and remove node_modules for pushing the project added card in department for both admin and user
+[33m0b38bb8[m HEAD@{21}: commit: Fix: remove node_modules and add gitignore
+[33m43cd635[m HEAD@{22}: commit: added cards in department page for both admin and user panel
+[33m97c1fec[m[33m ([m[1;32mmain[m[33m)[m HEAD@{23}: checkout: moving from main to om
+[33m97c1fec[m[33m ([m[1;32mmain[m[33m)[m HEAD@{24}: clone: from https://github.com/RabinShresthaa/intern.git

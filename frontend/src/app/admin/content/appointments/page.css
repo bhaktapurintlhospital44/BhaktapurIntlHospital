@@ -1,0 +1,164 @@
+.page-container {
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #1e40af;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-wrapper {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 15px;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #1e40af;
+  margin: 0;
+  font-weight: 600;
+  border-bottom: 3px solid #0b7ac4;
+  padding-bottom: 0.5rem;
+}
+
+.total-badge {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+  font-size: 1.2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.status-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-pending {
+  background-color: #f59e0b;
+}
+.status-confirmed {
+  background-color: #10b981;
+}
+.status-completed {
+  background-color: #8b5cf6;
+}
+.status-cancelled {
+  background-color: #ef4444;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.text {
+  margin: 0.25rem 0;
+  color: #4b5563;
+}
+
+.text-strong {
+  font-weight: 500;
+}
+
+.text-muted {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  flex: 1;
+  min-width: 120px;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.loading,
+.error {
+  padding: 2rem;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.loading h2 {
+  color: #1e40af;
+}
+
+.error h2 {
+  color: #dc2626;
+}

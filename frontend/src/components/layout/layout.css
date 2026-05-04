@@ -1,0 +1,117 @@
+/* HEADER */
+.site-header {
+  background-color: #325bb3;
+  padding: 10px 20px;
+  border-radius: 0 0 10px 10px;
+  color: white;
+}
+
+/* HEADER LAYOUT */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* TEXT */
+.logo-text h1 {
+  font-size: 18px;
+  margin: 0;
+  color: white;
+}
+
+/* ROTATING TEXT */
+.site-header-subtitle {
+  font-size: 14px;
+  color: white;
+}
+
+/* extra class (optional but clean) */
+.rotating-text {
+  color: white;
+}
+
+/* NAV */
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.site-subnav {
+  display: flex;
+  gap: 15px;
+}
+
+.site-subnav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.site-subnav a:hover {
+  color: #dbeafe;
+}
+
+/* MOBILE BUTTON */
+.mobile-menu-button {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* MAIN */
+.site-main {
+  min-height: 80vh;
+  padding: 20px;
+  width: 100%;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .site-subnav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 70px;
+    background: #0d3fab;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .site-subnav.mobile-menu-open {
+    display: flex;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+}
+.rotating-text {
+  color: white;
+  opacity: 80%;
+}

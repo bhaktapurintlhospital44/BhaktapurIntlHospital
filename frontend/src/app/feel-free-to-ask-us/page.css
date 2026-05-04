@@ -1,0 +1,143 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e6f7ff 100%);
+  padding: 2rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+/* HEADER (exact same gradient) */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #0b7ac4 0%, #1e40af 100%);
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 5px 15px rgba(11, 122, 196, 0.3);
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* FAQ BOX */
+.faqBox {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 15px;
+  border: 1px solid #d1d5db;
+}
+
+.faqBox h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #1e40af;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* FAQ LIST */
+.faqList {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.faqItem {
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.faqQ {
+  color: #0b7ac4;
+}
+
+.faqA {
+  color: #4b5563;
+}
+
+.loadingText {
+  text-align: center;
+  color: #6b7280;
+}
+
+/* FORM BOX */
+.formBox {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-radius: 15px;
+  border: 1px solid #d1d5db;
+}
+
+.formBox h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #166534;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* FORM */
+.form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.form input,
+.form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* BUTTON */
+.form button {
+  padding: 0.75rem;
+  background-color: #0b7ac4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #09609d;
+}
+
+.form button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}

@@ -1,0 +1,136 @@
+.contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+  margin-top: -50px;
+  flex-wrap: wrap;
+  padding-right: 60px;
+}
+
+/* each item */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+/* icons */
+.contact-item img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* text */
+.contact-item span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+}
+
+/* =========================
+   EXTRA LARGE (1600px+)
+========================= */
+@media (min-width: 1600px) {
+  .contact-row {
+    padding-right: 290px;
+    gap: 35px;
+  }
+}
+
+/* =========================
+   LARGE DESKTOP (1440px–1599px)
+========================= */
+@media (max-width: 1599px) {
+  .contact-row {
+    padding-right: 220px;
+  }
+}
+
+/* =========================
+   DESKTOP (1200px–1439px)
+========================= */
+@media (max-width: 1439px) {
+  .contact-row {
+    padding-right: 120px;
+    justify-content: flex-end;
+  }
+}
+
+/* =========================
+   SMALL DESKTOP / LAPTOP (992px–1199px)
+========================= */
+@media (max-width: 1199px) {
+  .contact-row {
+    padding-right: 60px;
+    margin-top: -50px;
+  }
+}
+
+/* =========================
+   TABLET (768px–991px)
+========================= */
+@media (max-width: 991px) {
+  .contact-row {
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: -30px;
+  }
+}
+
+/* =========================
+   LARGE MOBILE (600px–767px)
+   👉 IMPORTANT: STILL ROW
+========================= */
+@media (max-width: 767px) {
+  .contact-row {
+    flex-direction: row; /* keep row */
+
+    padding-left: 35px;
+    flex-wrap: wrap; /* allow wrapping if needed */
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .contact-item span {
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   MOBILE (400px–599px)
+========================= */
+@media (max-width: 599px) {
+  .contact-row {
+    flex-direction: row;
+    padding-left: 40px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .contact-item img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .contact-item span {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE (≤399px)
+========================= */
+@media (max-width: 399px) {
+  .contact-row {
+    gap: 10px;
+  }
+
+  .contact-item span {
+    display: none; /* optional: hide text if screen too small */
+  }
+}

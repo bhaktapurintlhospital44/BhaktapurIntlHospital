@@ -1,0 +1,108 @@
+/* UserReports.module.css */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  color: #325bb3;
+  border-bottom: 3px solid #325bb3;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.reportGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.reportCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s;
+}
+
+.reportCard:hover {
+  transform: translateY(-5px);
+}
+
+.reportTitle {
+  color: #1e293b;
+  margin-top: 0;
+}
+
+.fileList {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fileLink {
+  color: #325bb3;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fileLink:hover {
+  text-decoration: underline;
+}
+
+.dateTag {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  display: block;
+  margin-top: 10px;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: flex-start; /* anchor to top, not center */
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto; /* allow scrolling inside overlay if content is tall */
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  margin-top: 20px; /* small gap from the very top edge */
+  margin-bottom: 20px; /* breathing room at bottom */
+}
+
+.videoPlayer,
+.iframeViewer {
+  width: 100%;
+  height: 70vh;
+  border: none;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}

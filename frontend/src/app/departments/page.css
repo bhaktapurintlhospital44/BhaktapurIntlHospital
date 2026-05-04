@@ -1,0 +1,117 @@
+/* =========================
+   PAGE BACKGROUND
+========================= */
+.section {
+  padding: 40px 5%; /* CHANGED: from 150px to 5% for responsiveness */
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   TITLES
+========================= */
+.section-title {
+  text-align: center;
+  font-size: clamp(24px, 5vw, 32px); /* Responsive font size */
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: clamp(16px, 2vw, 20px);
+}
+
+/* =========================
+   GRID (RESPONSIVE)
+========================= */
+.services-grid {
+  display: grid;
+  /* CHANGED: auto-fit creates columns based on available space */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+  gap: 22px;
+  width: 100%;
+  max-width: 1300px; /* Limits width on ultra-wide screens */
+  margin: 0 auto;
+}
+
+/* =========================
+   SERVICE CARD
+========================= */
+.service-box {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(6px);
+  padding: 16px;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%; /* Changed from fixed 260px to 100% for flex growth */
+  min-height: 280px;
+  box-sizing: border-box;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  border-color: #3b82f6;
+}
+
+/* =========================
+   HEADER TITLE / SUBTITLE
+========================= */
+.header-title-subtitle {
+  background: linear-gradient(135deg, #0b7ac4 0%, #1e40af 100%);
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  /* margin-left: 20px; */
+}
+
+.department-container{
+  background-color: white;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1300px;
+  border-radius: 20px;;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+  border: 1px solid #e2e8f0; 
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;}
+/* =========================
+   MOBILE RESPONSIVE (KEEPING YOUR EXISTING QUERIES)
+========================= */
+@media (max-width: 768px) {
+  .section {
+    padding: 20px 15px;
+  }
+
+
+  .department-container{
+     padding: 20px 15px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+
+  .header-title-subtitle {
+    padding: 1.5rem 1rem;
+  }
+}

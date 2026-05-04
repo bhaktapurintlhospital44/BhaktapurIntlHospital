@@ -1,0 +1,160 @@
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* TITLES */
+.mainTitle {
+  font-size: 2.5rem;
+  color: #1e40af;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* CENTER STATES */
+.centerBox {
+  padding: 2rem;
+  text-align: center;
+}
+
+.error {
+  color: #dc2626;
+}
+
+/* CARD BASE */
+.card {
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* ADD CARD */
+.addCard {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+/* LIST CARD */
+.listCard {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+/* SECTION TITLE */
+.sectionTitle {
+  font-size: 1.8rem;
+  color: #1e40af;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  border-bottom: 3px solid #0b7ac4;
+  padding-bottom: 0.5rem;
+}
+
+/* FORM */
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+/* BUTTONS */
+.primaryBtn {
+  background: #0b7ac4;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* LIST HEADER */
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  background: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* FAQ LIST */
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* FAQ CARD */
+.faqCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* TEXT */
+.q {
+  font-size: 1.3rem;
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.a {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.meta {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+/* BUTTON ROW */
+.btnRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.editBtn {
+  background: #0b7ac4;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background: #ef4444;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* EMPTY */
+.empty {
+  text-align: center;
+  color: #6b7280;
+  padding: 2rem;
+}

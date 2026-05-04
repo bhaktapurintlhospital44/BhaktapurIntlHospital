@@ -1,0 +1,316 @@
+/* Admin Stories Page Styles */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.title {
+  font-size: 2rem;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.formContainer {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  color: #1e40af;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formLabel {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.formTextarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formTextarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.dragDropArea {
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  background-color: #f9fafb;
+}
+
+.dragDropArea:hover {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.dragDropAreaActive {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.dragDropText {
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.dragDropSubtext {
+  color: #9ca3af;
+  font-size: 0.8rem;
+}
+
+.imagePreview {
+  margin-top: 1rem;
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.buttonPrimary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.buttonPrimary:hover {
+  background-color: #2563eb;
+}
+
+.buttonSuccess {
+  background-color: #10b981;
+  color: white;
+}
+
+.buttonSuccess:hover {
+  background-color: #059669;
+}
+
+.buttonCancel {
+  background-color: #6b7280;
+  color: white;
+}
+
+.buttonCancel:hover {
+  background-color: #4b5563;
+}
+
+.buttonDanger {
+  background-color: #ef4444;
+  color: white;
+}
+
+.buttonDanger:hover {
+  background-color: #dc2626;
+}
+
+.storiesList {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.listTitle {
+  font-size: 1.5rem;
+  color: #1e40af;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.tableHeader {
+  background-color: #f1f5f9;
+  font-weight: 600;
+  color: #374151;
+}
+
+.tableCell {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tableRow:hover {
+  background-color: #f8fafc;
+}
+
+.actionCell {
+  text-align: center;
+}
+
+.actionButton {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  margin: 0 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.actionButton:hover {
+  transform: translateY(-1px);
+}
+
+.actionButtonEdit {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.actionButtonEdit:hover {
+  background-color: #d97706;
+}
+
+.actionButtonDelete {
+  background-color: #ef4444;
+  color: white;
+}
+
+.actionButtonDelete:hover {
+  background-color: #dc2626;
+}
+
+.noStories {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .formContainer,
+  .storiesList {
+    padding: 1rem;
+  }
+  
+  .buttonGroup {
+    flex-direction: column;
+  }
+  
+  .button {
+    width: 100%;
+  }
+  
+  .tableContainer {
+    font-size: 0.8rem;
+  }
+  
+  .tableCell {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.25rem;
+  }
+  
+  .formTitle {
+    font-size: 1.25rem;
+  }
+  
+  .listTitle {
+    font-size: 1.25rem;
+  }
+}

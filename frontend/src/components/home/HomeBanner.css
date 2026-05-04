@@ -1,0 +1,154 @@
+.home-banner-wrapper {
+  position: relative;
+  width: 100%;
+  height: 54vh;
+  overflow: hidden;
+  border: 2px solid rgba(0, 0, 255, 0.195);
+  cursor: pointer; /* Cursor stays pointer as requested */
+}
+
+/* --- Responsive Adjustments --- */
+
+/* Tablets (iPad, etc.) */
+@media (max-width: 1024px) {
+  .home-banner-wrapper {
+    height: 400px;
+  }
+  .nav-btn {
+    padding: 12px 16px;
+    font-size: 20px;
+  }
+}
+
+/* Mobile Phones (iPhone, Android) */
+@media (max-width: 768px) {
+  .home-banner-wrapper {
+    height: 250px; /* Shorter height for mobile */
+  }
+
+  .nav-btn {
+    padding: 8px 12px;
+    font-size: 18px;
+    left: 2px; /* Move arrows closer to edges */
+    right: 60px;
+    display: none;
+    /* background: rgba(0, 0, 0, 0.2); Lighter background on mobile */
+  }
+
+  .indicator-dots {
+    bottom: 10px;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .dot.active {
+    width: 18px;
+  }
+}
+
+/* Smallest Devices */
+@media (max-width: 480px) {
+  .home-banner-wrapper {
+    height: 200px;
+  }
+  /* Optional: Hide arrows on very small screens to rely on swipe */
+  .nav-btn {
+    display: none;
+  }
+}
+
+/* Update your .banner-track to remove the hardcoded transition */
+.banner-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* Transition is handled via inline styles in React */
+}
+
+.banner-slide {
+  min-width: 100%;
+  cursor: default;
+  height: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.banner-img-fluid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  pointer-events: none; /* Crucial: clicks go through to the track */
+}
+
+/* --- NAVIGATION ARROWS --- */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(11, 122, 196, 0.785);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer; /* Arrows keep pointer cursor */
+  font-size: 24px;
+  z-index: 10;
+  transition: background 0.3s;
+  border-radius: 50%;
+}
+
+.nav-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.indicator-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: white;
+  width: 25px; /* Makes the active dot a bit longer/pill-shaped */
+  border-radius: 10px;
+}
+
+.banner-slide {
+  user-select: none; /* Prevents text/image highlighting */
+  -webkit-user-drag: none; /* Specifically for Safari/Chrome */
+}
+
+.banner-img-fluid {
+  pointer-events: none; /* Ensures the mouse events hit the 'track' instead of the image */
+}
+
+.home-banner-wrapper {
+  touch-action: pan-y; /* Allows normal scrolling up/down but takes over horizontal swipes */
+}

@@ -1,0 +1,250 @@
+import HeroSection from "@/components/home/HeroSection";
+import ServicesSection from "@/components/home/ServicesSection";
+import WhyChooseUsSection from "@/components/home/WhyChooseUsSection";
+import AppointmentSection from "@/components/home/AppointmentSection";
+import DepartmentSection from "@/components/home/DepartmentSection";
+import VideoHeroSection from "@/components/home/VideoHeroSection";
+
+import { getHomeContent } from "@/lib/api/homeContent";
+import { getDepartments as fetchDepartmentList } from "@/lib/api/departments";
+
+async function loadPageData() {
+  try {
+    // Fetch both simultaneously
+    const [homeData, deptData] = await Promise.all([
+      getHomeContent(),
+      fetchDepartmentList(),
+    ]);
+
+    return {
+      content: homeData,
+      departments: deptData || [],
+    };
+  } catch (err) {
+    console.error("Failed to load page data:", err);
+    return { content: null, departments: [] };
+  }
+}
+
+function HomeVideoSection({ videoPath }) {
+  const validVideoPath = videoPath || "videos/hospital-tour.MOV";
+  return (
+    <section className="section">
+      <div style={{ marginTop: "-3.1rem" }}>
+        <div
+          className="video-container"
+          style={{ width: "100%", position: "relative" }}
+        >
+          <video
+            controls
+            autoPlay
+            muted
+            loop
+            playsInline
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          >
+            <source src={validVideoPath} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          {/* --- MOVING TEXT OVERLAY --- */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "10px", // ✅ FIXED: Lowered the text (was 50px)
+              left: 0,
+              width: "100%",
+              background: "rgba(11, 243, 27, 0.6)",
+              color: "#fff",
+              padding: "8px 0",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+              pointerEvents: "none",
+              zIndex: 10,
+              fontSize: "1.1rem",
+              fontWeight: "bold",
+            }}
+          >
+            <div
+              style={{
+                display: "inline-block",
+                paddingLeft: "100%",
+                marginTop: "4px",
+                animation: "marquee 12s linear infinite",
+                color: "white",
+              }}
+            >
+              Bhaktapur international hospital, 24/7 free ambulance, radiology,
+              SSF
+            </div>
+          </div>
+
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
+            @keyframes marquee {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-100%); }
+            }
+          `,
+            }}
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default async function HomePage() {
+  const { content, departments } = await loadPageData();
+
+  // Helper to process services without crashing
+  const services = Array.isArray(content?.services)
+    ? content.services.map((s) => ({
+        title: s.title || s,
+        description: s.description || "",
+        imageUrl: s.imageUrl || "",
+      }))
+    : [];
+
+  return (
+    <>
+      {content ? (
+        <>
+
+          <div         
+              style={{
+              position: "relative",
+              bottom: "10px", // ✅ FIXED: Lowered the text (was 50px)
+              left: 0,
+              width: "100%",
+              background: "rgba(11, 243, 27, 0.6)",
+              color: "#fff",
+              padding: "8px 0",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+              pointerEvents: "none",
+              zIndex: 10,
+              fontSize: "1.1rem",
+              fontWeight: "bold",
+              
+            }}>
+            <h2 className="video-hero-section-title"               style={{
+                display: "inline-block",
+                paddingLeft: "100%",
+                marginTop: "4px",
+                animation: "marquee 12s linear infinite",
+                color: "white",
+              }}>
+              {content.videoHeroTitle ||
+                "Bhaktapur International Hospital 24/7 free ambulance, radiplogylala"}
+            </h2>
+          </div>
+          <HomeVideoSection videoPath={content.videoPath} />
+
+          <section className="section" style={{ textAlign: "center" }}>
+            <h2 className="hero-section-title">
+              {content.heroTitle ||
+                "Welcome to Bhaktapur International Hospital"}
+            </h2>
+            <p className="hero-section-subtitle">{content.heroSubtitle}</p>
+          </section>
+
+          <ServicesSection services={services} />
+
+          {/* Corrected: Use the departments fetched from the department API */}
+          <DepartmentSection departments={departments} />
+
+          <section className="section">
+            <h2 className="section-title">Why Choose Us</h2>
+            <ul className="bullet-list">
+              {Array.isArray(content.whyChooseUs) ? (
+                content.whyChooseUs.map((reason, i) => (
+                  <li key={i}>{reason}</li>
+                ))
+              ) : (
+                <li>No reasons available</li>
+              )}
+            </ul>
+          </section>
+        </>
+      ) : (
+        <>
+          <HomeVideoSection videoPath="/videos/hospital-tour.mp4" />
+          <VideoHeroSection title={content.videoHeroTitle}/>
+          <HeroSection />
+          <ServicesSection />
+          <DepartmentSection departments={departments} />
+          <WhyChooseUsSection />
+        </>
+      )}
+
+      {/* Appointment & Map Section */}
+      <section
+        className="section"
+        style={{
+          width: "100%",
+          padding: "4rem 0",
+          background: "linear-gradient(135deg, #f0f9ff 0%, #e6f7ff 100%)",
+        }}
+      >
+        <h2
+          className="section-title"
+          style={{
+            fontSize: "2.5rem",
+            color: "#0b7ac4",
+            marginBottom: "2rem",
+            textAlign: "center",
+          }}
+        >
+          Book an Appointment
+        </h2>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "2rem",
+            flexWrap: "wrap",
+          }}
+        >
+          <div
+            style={{
+              flex: "1",
+              minWidth: "300px",
+              maxWidth: "600px",
+              marginTop: "-43px",
+            }}
+          >
+            <AppointmentSection />
+          </div>
+
+          <div
+            style={{
+              flex: "1",
+              minWidth: "300px",
+              maxWidth: "600px",
+              height: "470px",
+
+              marginLeft: "30px",
+              marginRight: "30px",
+              borderRadius: "12px",
+              overflow: "hidden",
+              boxShadow: "0 8px 16px rgba(0, 0, 0, 0.15)",
+              border: "1px solid #04234b",
+            }}
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.5123456789!2d85.4297!3d27.6710!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDQwJzE1LjYiTiA4NcKwMjUnNDYuOSJF!5e0!3m2!1sen!2snp!4v1234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              title="Map"
+            />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

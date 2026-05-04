@@ -1,0 +1,100 @@
+"use client";
+import { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
+import { getDepartmentById } from '@/lib/api/departments';
+import Link from 'next/link';
+
+export default function DepartmentDetailPage() {
+  const params = useParams();
+  const id = params?.id; // Safely access the dynamic ID
+
+  const [dept, setDept] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    if (!id) return;
+
+    const fetchDetails = async () => {
+      try {
+        setLoading(true);
+        const data = await getDepartmentById(id);
+        if (data) {
+          setDept(data);
+          setError(false);
+        } else {
+          setError(true);
+        }
+      } catch (err) {
+        console.error("Fetch failed:", err);
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchDetails();
+  }, [id]);
+
+  if (loading) return <div style={styles.loader}>Loading Details...</div>;
+
+  if (error || !dept) return (
+    <div style={styles.errorContainer}>
+      <h1>Department Not Found</h1>
+      <p>We couldn't retrieve the details for this department ID: <strong>{id}</strong></p>
+      <Link href="/departments" style={styles.backLink}>← Return to All Departments</Link>
+    </div>
+  );
+
+  return (
+    <div style={styles.wrapper}>
+      <Link href="/departments" style={styles.backLink}>← Back to List</Link>
+      
+      <header style={styles.header}>
+        <img src={dept.image} alt={dept.name} style={styles.mainImg} />
+        <div style={styles.headerText}>
+          <h1 style={styles.title}>{dept.name}</h1>
+          <p style={styles.contact}><strong>Contact:</strong> {dept.contactNumber}</p>
+          <p style={styles.contact}><strong>Email:</strong> {dept.email}</p>
+        </div>
+      </header>
+
+      <section style={styles.section}>
+        <h2>About Department</h2>
+        <p style={styles.desc}>{dept.description}</p>
+      </section>
+
+      {dept.doctors && dept.doctors.length > 0 && (
+        <section style={styles.section}>
+          <h2>Specialists</h2>
+          <div style={styles.docGrid}>
+            {dept.doctors.map((doc, i) => (
+              <div key={i} style={styles.docCard}>
+                <img src={doc.image} alt={doc.name} style={styles.docImg} />
+                <h4>{doc.name}</h4>
+                <p>{doc.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+const styles = {
+  loader: { padding: '100px', textAlign: 'center', fontSize: '1.5rem' },
+  errorContainer: { padding: '100px', textAlign: 'center' },
+  wrapper: { maxWidth: '1000px', margin: '0 auto', padding: '40px 20px', fontFamily: 'Inter, sans-serif' },
+  backLink: { color: '#0b7ac4', textDecoration: 'none', fontWeight: '600' },
+  header: { display: 'flex', gap: '30px', marginTop: '20px', flexWrap: 'wrap' },
+  mainImg: { width: '100%', maxWidth: '400px', borderRadius: '12px', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' },
+  headerText: { flex: 1, minWidth: '300px' },
+  title: { fontSize: '2.5rem', margin: '0 0 15px 0', color: '#111827' },
+  contact: { margin: '5px 0', color: '#4b5563' },
+  section: { marginTop: '40px', borderTop: '1px solid #e5e7eb', paddingTop: '30px' },
+  desc: { lineHeight: '1.8', color: '#374151', fontSize: '1.1rem' },
+  docGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '20px', marginTop: '20px' },
+  docCard: { textAlign: 'center', padding: '15px', border: '1px solid #f3f4f6', borderRadius: '12px' },
+  docImg: { width: '80px', height: '80px', borderRadius: '50%', objectFit: 'cover', marginBottom: '10px' }
+};

@@ -1,0 +1,194 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e6f7ff 100%);
+  padding: 2rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #0b7ac4 0%, #1e40af 100%);
+  border-radius: 15px;
+  color: white;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* BADGES */
+.badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.badge0 {
+  background: #10b981;
+}
+.badge1 {
+  background: #f59e0b;
+}
+.badge2 {
+  background: #8b5cf6;
+}
+
+/* TEXT */
+.center {
+  text-align: center;
+}
+
+.center h3 {
+  font-size: 1.8rem;
+  color: #1e40af;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #0b7ac4;
+  font-weight: bold;
+}
+
+/* FEATURES */
+.features h4 {
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  color: #1e40af;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+}
+
+/* BUTTON */
+.button {
+  width: 100%;
+  background: #0b7ac4;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #09609d;
+}
+
+/* MODAL */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+.modalBox {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form input,
+.form textarea {
+  padding: 0.8rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.form button {
+  background: #10b981;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.loading {
+  text-align: center;
+  padding: 100px;
+}
