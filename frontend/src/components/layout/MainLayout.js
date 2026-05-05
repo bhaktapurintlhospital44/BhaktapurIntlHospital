@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getHomeContent } from "@/lib/api/homeContent";
 import { reportApi } from "@/lib/api/reports"; // Import the reports API
 import { usePathname } from "next/navigation";
+import "./layout.css"
 
 export default function MainLayout({ children }) {
   const [phrases, setPhrases] = useState([
@@ -66,7 +67,7 @@ export default function MainLayout({ children }) {
     setStatus("Sending...");
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/api"}/feedbacks`,
+        `${process.env.NEXT_PUBLIC_API_URL || "/api"}/feedbacks`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -394,7 +395,7 @@ export default function MainLayout({ children }) {
                 style={{
                   color: "white",
                   marginBottom: "1.5rem",
-                  fontSize: "1.8rem",
+                  fontSize: "clamp(1.4rem, 1.8vw, 4rem)",
                 }}
               >
                 Feedback Form

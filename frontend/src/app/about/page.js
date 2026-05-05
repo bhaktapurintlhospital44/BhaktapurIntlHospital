@@ -11,7 +11,7 @@ export default function AboutPage() {
   useEffect(() => {
     const fetchAboutContent = async () => {
       try {
-        const res = await fetch('http://localhost:4000/api/about-content');
+        const res = await fetch('/api/about-content');
         if (res.ok) {
           const data = await res.json();
           if (data) {

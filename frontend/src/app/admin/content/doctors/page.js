@@ -249,7 +249,7 @@ const styles = {
 //         const imagenewDoct = new newDoct();
 //         imagenewDoct.append('image', file);
 
-//         const uploadRes = await fetch('http://localhost:4000/api/doctors/upload-image', {
+//         const uploadRes = await fetch('/api/doctors/upload-image', {
 //         method: 'POST',
 //         body: imagenewDoct,
 //         });
@@ -258,7 +258,7 @@ const styles = {
 //       }
 
 //       // Second, save the doctor record with the image path
-//       const doctorRes = await fetch('http://localhost:4000/api/doctors', {
+//       const doctorRes = await fetch('/api/doctors', {
 //         method: 'POST',
 //         headers: { 'Content-Type': 'application/json' },
 //         body: JSON.stringify({ ...newDoct, image: imagePath }),
@@ -312,7 +312,7 @@ const styles = {
 //       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1rem' }}>
 //         {doctors.map(doc => (
 //           <div key={doc._id} style={{ border: '1px solid #eee', padding: '1rem', textAlign: 'center' }}>
-//             <img src={`http://localhost:4000${doc.image}`} alt={doc.name} style={{ width: '100px', height: '100px', objectFit: 'cover', borderRadius: '50%' }} />
+//             <img src={`${doc.image}`} alt={doc.name} style={{ width: '100px', height: '100px', objectFit: 'cover', borderRadius: '50%' }} />
 //             <h3>{doc.name}</h3>
 //             <p>{doc.specialization}</p>
 //           </div>

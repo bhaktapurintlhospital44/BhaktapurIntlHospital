@@ -11,9 +11,9 @@ export default function UserReportsPage() {
   // FIX: Use file.fileId (the unique disk name) — NOT file.fileName.
   // The backend route is /api/reports/file/:fileId
   const getViewUrl = (fileId) =>
-    `http://localhost:4000/api/reports/file/${fileId}`;
+    `/api/reports/file/${fileId}`;
   const getDownloadUrl = (fileId) =>
-    `http://localhost:4000/api/reports/file/${fileId}?download=true`;
+    `/api/reports/file/${fileId}?download=true`;
 
   useEffect(() => {
     const fetchReports = async () => {

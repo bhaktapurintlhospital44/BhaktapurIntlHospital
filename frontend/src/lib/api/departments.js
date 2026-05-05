@@ -1,5 +1,5 @@
 // This file contains API functions for interacting with the backend department endpoints. It includes functions to fetch all departments, fetch a single department by ID, create a new department, update an existing department, and delete a department. Each function handles errors gracefully and logs them for debugging purposes.
-const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api/departments').replace(/\/$/, '');
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || '/api/departments').replace(/\/$/, '');
 
 /**
  * Fetch all departments

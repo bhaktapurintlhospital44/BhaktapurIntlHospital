@@ -1,6 +1,6 @@
 // API client for health packages
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api/health-packages';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '/api/health-packages';
 
 // Get all health packages
 export const getHealthPackages = async () => {
@@ -117,7 +117,7 @@ export const deleteHealthPackage = async (id) => {
 // Book a health package
 export const bookHealthPackage = async (bookingData) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/bookings`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/bookings`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -140,7 +140,7 @@ export const bookHealthPackage = async (bookingData) => {
 // Get all bookings
 export const getBookings = async () => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/bookings`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/bookings`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -162,7 +162,7 @@ export const getBookings = async () => {
 // Update a booking status
 export const updateBookingStatus = async (id, status) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/bookings/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/bookings/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -185,7 +185,7 @@ export const updateBookingStatus = async (id, status) => {
 // Delete a booking
 export const deleteBooking = async (id) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/bookings/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/bookings/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -207,7 +207,7 @@ export const deleteBooking = async (id) => {
 // Book an appointment
 export const bookAppointment = async (appointmentData) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/appointments`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/appointments`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -230,7 +230,7 @@ export const bookAppointment = async (appointmentData) => {
 // Get all appointments
 export const getAppointments = async () => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/appointments`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/appointments`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -252,7 +252,7 @@ export const getAppointments = async () => {
 // Update an appointment status
 export const updateAppointmentStatus = async (id, status) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/appointments/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/appointments/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -275,7 +275,7 @@ export const updateAppointmentStatus = async (id, status) => {
 // Delete an appointment
 export const deleteAppointment = async (id) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/appointments/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/appointments/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -297,7 +297,7 @@ export const deleteAppointment = async (id) => {
 // Submit a question
 export const submitQuestion = async (questionData) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/questions`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/questions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -320,7 +320,7 @@ export const submitQuestion = async (questionData) => {
 // Get all questions
 export const getQuestions = async () => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/questions`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/questions`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -342,7 +342,7 @@ export const getQuestions = async () => {
 // Update a question (for adding answers)
 export const updateQuestion = async (id, updateData) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/questions/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/questions/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -365,7 +365,7 @@ export const updateQuestion = async (id, updateData) => {
 // Delete a question
 export const deleteQuestion = async (id) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/questions/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/questions/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -387,7 +387,7 @@ export const deleteQuestion = async (id) => {
 // Get all FAQs
 export const getFaqs = async () => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/faqs`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/faqs`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -409,7 +409,7 @@ export const getFaqs = async () => {
 // Create a new FAQ
 export const createFaq = async (faqData) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/faqs`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/faqs`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -432,7 +432,7 @@ export const createFaq = async (faqData) => {
 // Update an FAQ
 export const updateFaq = async (id, faqData) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/faqs/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/faqs/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -455,7 +455,7 @@ export const updateFaq = async (id, faqData) => {
 // Delete an FAQ
 export const deleteFaq = async (id) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/faqs/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/faqs/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -477,7 +477,7 @@ export const deleteFaq = async (id) => {
 // Get all stories
 export const getStories = async () => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/stories`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/stories`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -499,7 +499,7 @@ export const getStories = async () => {
 // Get a specific story by ID
 export const getStoryById = async (id) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/stories/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/stories/${id}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -521,7 +521,7 @@ export const getStoryById = async (id) => {
 // Create a new story
 export const createStory = async (storyData) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/stories`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/stories`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -544,7 +544,7 @@ export const createStory = async (storyData) => {
 // Update a story
 export const updateStory = async (id, storyData) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/stories/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/stories/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -567,7 +567,7 @@ export const updateStory = async (id, storyData) => {
 // Delete a story
 export const deleteStory = async (id) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/stories/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/stories/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -604,7 +604,7 @@ export const deleteStory = async (id) => {
 export const getFeedBacks = async () => {
   try {
     // Check if your backend endpoint is actually '/feedbacks' 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/feedbacks`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/feedbacks`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -627,7 +627,7 @@ export const getFeedBacks = async () => {
 // Update a question (for adding answers)
 export const updateFeedBack = async (id, updateData) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/feedbacks/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/feedbacks/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -650,7 +650,7 @@ export const updateFeedBack = async (id, updateData) => {
 // Delete a question
 export const deleteFeedBack = async (id) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api'}/feedbacks/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || '/api'}/feedbacks/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

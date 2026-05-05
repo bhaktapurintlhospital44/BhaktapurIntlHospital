@@ -1,8 +1,8 @@
 // src/lib/api/imageUpload.js
 
-const HOME_API_BASE = "http://localhost:4000/api/home-content";
-const ABOUT_API_BASE = "http://localhost:4000/api/about-content";
-const DEPARTMENTS_API_BASE = "http://localhost:4000/api/departments";
+const HOME_API_BASE = "/api/home-content";
+const ABOUT_API_BASE = "/api/about-content";
+const DEPARTMENTS_API_BASE = "/api/departments";
 
 // Upload image file to home content backend
 export async function uploadHomeImage(file) {

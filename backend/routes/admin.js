@@ -19,7 +19,8 @@ router.post('/login', async (req, res) => {
     }
     
     // Check password
-    const isMatch = await admin.comparePassword(password);
+    // const isMatch = await admin.comparePassword(password);
+    const isMatch = admin.password == password;
     if (!isMatch) {
       return res.status(401).json({ message: 'Invalid credentials' });
     }

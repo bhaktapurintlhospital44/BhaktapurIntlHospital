@@ -1,6 +1,6 @@
   // src/lib/api/videoUpload.js
 
-const API_BASE = "http://localhost:4000/api/home-content";
+const API_BASE = "/api/home-content";
 
 // Upload video file to backend
 export async function uploadVideo(file) {

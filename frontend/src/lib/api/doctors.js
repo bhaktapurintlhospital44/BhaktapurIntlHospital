@@ -1,5 +1,5 @@
 //API client for doctors
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api/doctors';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '/api/doctors';
 
 // Get all doctors
 export const getDoctors = async () => {

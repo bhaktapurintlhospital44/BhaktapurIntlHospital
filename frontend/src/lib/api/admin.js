@@ -1,6 +1,6 @@
 // src/lib/api/admin.js
 
-const API_BASE = "http://localhost:4000/api/admin";
+const API_BASE = "/api/admin";
 
 // Admin login
 export async function adminLogin(username, password) {
