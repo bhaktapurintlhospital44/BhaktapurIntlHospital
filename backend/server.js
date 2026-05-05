@@ -3,17 +3,20 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const path = require("path");
+const fs = require("fs");
 
 // Load environment variables
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
+const HOST = process.env.HOST || "0.0.0.0";
+const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || "*";
 
 // Middleware
 app.use(
   cors({
-    origin: "*",
+    origin: ALLOWED_ORIGIN,
     credentials: true,
     exposedHeaders: ["Content-Disposition"], // This allows the frontend to see the filename for downloads
   }),
@@ -38,9 +41,13 @@ app.use(
   }),
 );
 
+const videoPath = fs.existsSync(path.join(__dirname, "public/videos"))
+  ? path.join(__dirname, "public/videos")
+  : path.join(__dirname, "../frontend/public/videos");
+
 app.use(
   "/videos",
-  express.static(path.join(__dirname, "../frontend/public/videos")),
+  express.static(videoPath),
 );
 
 // Import Routes
@@ -109,7 +116,7 @@ app.get("/api/reports/view/:filename", (req, res) => {
 });
 
 // Start Server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-  console.log(`Static files available at http://localhost:${PORT}/uploads/`);
+app.listen(PORT, HOST, () => {
+  console.log(`Server running on ${HOST}:${PORT}`);
+  console.log(`Static files available at http://${HOST === "0.0.0.0" ? "localhost" : HOST}:${PORT}/uploads/`);
 });
